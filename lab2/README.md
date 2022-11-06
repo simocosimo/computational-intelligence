@@ -24,7 +24,7 @@ Did I already say the word... mutation? lol
 | 20 |    23    |   23.5s   |
 | 50 |    70    |   1m 4s   |
 | 100 |   192     |   4min 6.2s   |
-| 200 |   1554     |   11min 27.5s   |
+| 200 |   617     |   16min 3.8s   |
 
 Parameters changes for every run, but in general are:
 - population: 10 * N
