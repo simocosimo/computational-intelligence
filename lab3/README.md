@@ -6,7 +6,7 @@ Implementation of nim-sum was already done during lecture. It wasn't clear what 
 ## 3.1: evolving rules
 I really tried my best to understand what was the meaning of "evolving fixed rules" since rules are... fixed. And I also couldn't understand defining a parameter and evolving it, since no metter what, the rules would be always the same ones.
 
-So I tried to implement an evolving strategy with some concepts that I got from here.
+So I tried to implement an evolving strategy with some concepts that I got from [here](https://mihaioltean.github.io/oltean_nim.pdf).
 The solution is based on building random functions that evaluate the nim configurations.
 
 The result of these functions represent the current state of the game:
