@@ -47,12 +47,12 @@ So originally the fitness function takes a chromosome and evalutes the whole gam
 But this is so slow that if I do it I might miss Christmas. 
 
 I think there is also no way to prune the game tree because the evaluation should be done with different chromosomes each time, so no way to skip some already-done computation, since there will be none (correct me if I'm wrong, though).
-I made an attempt to code this, I correctly built the game tree and evaluated the first rule. No luck on the other ones, since I should do multiple 
+I made an attempt to code this, I correctly built the game tree and evaluated the first rule. No luck on the other ones, since I should do multiple tree readings (takes a lot of time for big configurations).
 
 So my fitness works this way: 50 games against `pure_random`. The fitness value is the loss rate, so I need to minimize that.
 
 ### Genetic strategies
-I defined 2 crossover functions (single and double point), but the single point one seems to be the best.
+I defined 2 crossover functions (single and double point), but the single point one seems to perform better.
 
 Binary tournament selects two candidates, with a starting probability of 0.8, they are crossovered. They generate an offspring of size 2. This 2 new individual have an opportunity to be mutated twice, instantly.
 If they are not crossovered, they are mutated, twice.
