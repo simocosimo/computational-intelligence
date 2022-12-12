@@ -9,6 +9,8 @@ readme = "README.md"
 python = "^3.10"
 jupyter = "^1.0.0"
 anytree = "^2.8.0"
+numpy = "^1.23.5"
+matplotlib = "^3.6.2"
 
 
 [build-system]
