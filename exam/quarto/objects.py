@@ -291,3 +291,27 @@ class Quarto(object):
             winner = self.check_winner()
         self.print()
         return winner
+
+    # SECTION FOR USEFUL METHODS FOR LEARNING PHASE
+    def get_current_player(self) -> Player:
+        return self.__players[self.__current_player]
+    
+    def get_current_player_id(self) -> int:
+        return self.__current_player
+
+    def set_current_player(self, player_id: int) -> None:
+        self.__current_player = player_id
+
+    def get_playable_pieces(self):
+        game = list(map(list, self.get_board_status()))
+        pieces = list(range(16))
+        return [p for p in pieces if p not in [a for l in game for a in l if a != -1]]
+
+    def get_possible_moves(self):
+        game = list(map(list, self.get_board_status()))
+        moves = []
+        for y in range(len(game)):
+            for x in range(len(game[0])):
+                if game[y][x] == -1: moves.append((y, x))
+        return moves
+    
